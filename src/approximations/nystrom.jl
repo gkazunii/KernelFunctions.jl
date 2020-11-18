@@ -68,6 +68,7 @@ Nystrom factorization satisfying:
 ```math
 \mathbf{K} \approx \mathbf{C}^{\intercal}\mathbf{W}\mathbf{C}
 ```
+The indexes of matrix `X` which are sampled in the function are in S.  
 """
 function nystrom(k::Kernel, X::AbstractMatrix, S::Vector{<:Integer}; obsdim::Int=defaultobs)
     C, Cs = nystrom_sample(k, X, S; obsdim=obsdim)
